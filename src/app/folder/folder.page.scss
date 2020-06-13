@@ -207,23 +207,59 @@ ion-card {
 }
 
 ion-card-title {
-  font-size: 5vw;
-  padding: 20px 0;
+  font-size: 4vw;
+  padding: 3vw 0;
   @media (max-width: 48em) {
-    padding: 0 0;
-    
-}
+    padding: 3vw 0;
+    font-size: 5vw 
+  }
 }
 
 ion-card-subtitle {
   font-size: 2vw;
-  
+  @media (max-width: 48em) {
+    display: none;
+  }
 }
 
 .hogar-text {
   //justify-content: center;
   //align-items: center;
   padding: 5vw;
+  
+}
+
+.hogar-title {
+  padding-top: 5vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hogar-link {
+  height: 35px;
+  padding-bottom: 30%;
+}
+
+// Module Services
+
+.hogar-services {
+  padding: 3px;
+  margin: 5vw;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 10px;
+}
+
+.titleServices {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2vw;
+}
+
+.textServices {
+  text-align: center;
+  padding: 3vw;
 }
 
 ion-row {

@@ -10,7 +10,7 @@
         <ion-col size="6">
         </ion-col>
         <ion-col *ngFor="let a of array">
-          {{ a.title }}
+          <ion-item [routerLink]="['/fontaneros/']" fragment="{{ a.title }}" routerDirection="forward" class="hogar-link">{{ a.title }}</ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -21,10 +21,10 @@
 
 <ion-content [fullscreen]="true">
   <ion-grid class="ion-no-padding hogar-grid">
-
-    <ion-row>
+    
+    <ion-row id="{{ array[0].title }}">
       <ion-col size="12" size-md class="" style="z-index: 2000;">
-        <ion-img src="../../../assets/images/fregadero2.jpg" ></ion-img>
+        <ion-img src="../../../assets/images/fregadero2.jpg" alt="{{ imgAlt1 }}"></ion-img>
         <ion-card>
           <ion-card-header>
             <ion-card-title>Fontaneros</ion-card-title>
@@ -32,6 +32,12 @@
             
           </ion-card-header>
         </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="hogar-title" id="{{ array[1].title }}">
+      <ion-col size="12" size-md>
+        <h1> {{ array[1].title }} </h1>
       </ion-col>
     </ion-row>
 
@@ -48,13 +54,13 @@
         </p>
       </ion-col>
       <ion-col size="12" size-md class="">
-        <ion-img src="../../../assets/images/fregadero3.jpg" ></ion-img>
+        <ion-img src="../../../assets/images/fregadero3.jpg" alt= "{{ imgAlt2 }}"></ion-img>
       </ion-col>
     </ion-row>
 
     <ion-row class="ion-wrap-reverse">
       <ion-col size="12" size-md class="">
-        <ion-img src="../../../assets/images/fregadero1.jpg" ></ion-img>
+        <ion-img src="../../../assets/images/fregadero1.jpg" alt= "{{ imgAlt3 }}"></ion-img>
       </ion-col>
       <ion-col size="12" size-md class="hogar-text">
         <p>
@@ -66,18 +72,77 @@
       </ion-col>
     </ion-row>
 
-    <!--
-    <ion-row >
-      <div class="hogar-back-image hoger-image-main hogar-border"></div>
-      <div class="h-textFlotante">
-        <div class="h-textFlotante-main">Fontaneros</div>
-        <div class="h-textFlotante-secondary">La primera visita siempre es gratis</div>
-      </div>
+    <ion-row class="hogar-title" id="{{ array[2].title }}">
+      <ion-col size="12" size-md>
+        <h1>{{ array[2].title }}</h1>
+      </ion-col>
     </ion-row>
-    -->
 
+    <ion-row>
+      <ion-col size="12" size-md class="">
+        <div class="hogar-services">
+          <div>
+            <div class="titleServices">Urgencias</div>
+          </div>
+        
+          <div class="textServices">
+            Si necesitas un servicio urgente solo tienes que llamarnos. Nuestros fontaneros atienden servicios cualquier día de la semana a cualquier hora. Nuestros fontaneros en Madrid acuden al domicilio en tiempo record.
+          </div>
+        </div>
+      </ion-col>
+
+      <ion-col size="12" size-md class="">
+        <div class="hogar-services">
+          <div>
+            <div class="titleServices">Desatascos Hogar</div>
+          </div>
+        
+          <div class="textServices">
+            Contamos con un sistema de última tecnología para solucionar los problemas de atrancos en viviendas con un coste muy inferior a los desatrancos habituales con camión.
+          </div>
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" size-md class="">
+        <div class="hogar-services">
+          <div>
+            <div class="titleServices">Pocería</div>
+          </div>
+        
+          <div class="textServices">
+            Disponemos de poceros en Madrid, contamos con la mejor maquinaria para atender todo tipo de desatrancos. Contamos con camiones y máquinas portátiles para acceder a donde no pueden acceder los camiones.
+          </div>
+        </div>
+      </ion-col>
+
+      <ion-col size="12" size-md class="">
+        <div class="hogar-services">
+          <div>
+            <div class="titleServices">Instalaciones</div>
+          </div>
+        
+          <div class="textServices">
+            Instalación y reparación de sanitarios, grifería, WC, tuberías, multicapa, plomo, fontanería en cocinas, baños y reparaciones de fontanería del hogar. Instalación de descalcificadores y desatascos económicos en hogares.
+          </div>
+        </div>
+      </ion-col>
+
+    </ion-row>
     
-  
+    <ion-row class="hogar-title" id="{{ array[3].title }}">
+      <ion-col size="12" size-md>
+        <h1>{{ array[3].title }}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" size-md class="">
+        
+      </ion-col>
+    </ion-row>
     
   </ion-grid>
 

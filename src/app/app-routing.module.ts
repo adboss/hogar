@@ -4,11 +4,15 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'fontaneros/',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'fontaneros/:id',
+    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'fontaneros',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   
