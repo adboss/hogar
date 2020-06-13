@@ -1,21 +1,84 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
+<ion-header style="z-index: 200000;" >
+  <ion-toolbar class="toolbar-background">
+    <ion-buttons slot="start" style="margin-top: px; padding-top: 0px;">
       <ion-menu-button></ion-menu-button>
+      <ion-label >Fontaneros</ion-label>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+  
+    <ion-grid class="hogar-menu">
+      <ion-row>
+        <ion-col size="6">
+        </ion-col>
+        <ion-col *ngFor="let a of array">
+          {{ a.title }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true">
+  <ion-grid class="ion-no-padding hogar-grid">
+
+    <ion-row>
+      <ion-col size="12" size-md class="" style="z-index: 2000;">
+        <ion-img src="../../../assets/images/fregadero2.jpg" ></ion-img>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Fontaneros</ion-card-title>
+            <ion-card-subtitle>La primera visita siempre es gratis</ion-card-subtitle>
+            
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col size="12" size-md class="hogar-text">
+        <p>
+        Realizamos todo tipo de reparaciones al mejor precio. Nuestros fontaneros baratos realizan todo tipo de trabajos de fontanería. 
+        </p>
+        <p>
+          Nuestra empresa de fontanería está especializada en desatrancos de tuberías sin romper; para ello disponemos de diferentes herramientas y maquinarias para realizar los desatascos al mejor precio y con máxima garantía.
+        </p>
+        <p>
+          Podemos asegurarles que somos de la empresa de fontanería más económica de la Comunidad de Madrid. Al no tener ningún coste por desplazamiento, usted puede decidir con livertad, si realizar nuestro trabajo o no.
+        </p>
+      </ion-col>
+      <ion-col size="12" size-md class="">
+        <ion-img src="../../../assets/images/fregadero3.jpg" ></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-wrap-reverse">
+      <ion-col size="12" size-md class="">
+        <ion-img src="../../../assets/images/fregadero1.jpg" ></ion-img>
+      </ion-col>
+      <ion-col size="12" size-md class="hogar-text">
+        <p>
+          Localizamos fugas de agua por termografía y gas trazador. Localizador de fugas en Piscina. Localizamos fugas de agua por termografía y gas trazador. Sin picar ni causar daños.
+        </p>
+        <p>
+          Empresa especializada en detección y localización de fugas de agua ocultas. Reparamos la fuga de agua sin romper. Confía en profesionales.
+        </p> 
+      </ion-col>
+    </ion-row>
+
+    <!--
+    <ion-row >
+      <div class="hogar-back-image hoger-image-main hogar-border"></div>
+      <div class="h-textFlotante">
+        <div class="h-textFlotante-main">Fontaneros</div>
+        <div class="h-textFlotante-secondary">La primera visita siempre es gratis</div>
+      </div>
+    </ion-row>
+    -->
+
+    
+  
+    
+  </ion-grid>
+
 </ion-content>
