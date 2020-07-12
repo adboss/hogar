@@ -9,10 +9,12 @@ export class TransferService {
   sections: any[];
   sectionSelected: string;
 
-  constructor() { }
-
-  setSections(data: any[]){
-    this.sections = data;
+  constructor() { 
+    console.log("TransferService");
+  }
+    
+    setSections(data: any[]){
+      this.sections = data;
   }
 
   getSections() {

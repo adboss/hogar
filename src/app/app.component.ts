@@ -50,11 +50,13 @@ export class AppComponent implements OnInit {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private transfer: TransferService,
-  ) {
+  ) { 
+    console.log("AppComponent");
     this.initializeApp();
     console.log(this.appPages);
     transfer.setSections(this.appPages);
-    transfer.setSectionSelected(this.appPages[this.selectedIndex].title)
+    transfer.setSectionSelected(this.appPages[this.selectedIndex].title);
+    console.log("AppComponent | End");
   }
 
   
@@ -68,11 +70,12 @@ export class AppComponent implements OnInit {
   
 
   ngOnInit() {
+    console.log("AppComponent | ngOnInit");
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
-
+    console.log("AppComponent | ngOnInit | End");
    
   }
 

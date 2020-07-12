@@ -1,0 +1,28 @@
+  <ion-row>
+    <ion-col size="12" size-md>
+      <div style="text-align: center;">
+        Enlaces
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" size-md *ngFor="let columns of footer">
+      <ion-item-group>
+        <div *ngFor="let link of columns.rows">
+        <ion-item  color="dark" href="{{ link.link }}">
+          <ion-text>
+            {{ link.web }}
+          </ion-text>
+        </ion-item>
+      </div>
+      </ion-item-group>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" size-md>
+      <div style="text-align: center;">
+        grinboss 2020
+      </div>
+    </ion-col>
+  </ion-row>
+

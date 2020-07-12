@@ -2,7 +2,7 @@
   <ion-toolbar class="toolbar-background">
     <ion-buttons slot="start" style="margin-top: px; padding-top: 0px;">
       <ion-menu-button></ion-menu-button>
-      <ion-label >Fontaneros</ion-label>
+      <ion-label >Fontaneros 606 41 02 75</ion-label>
     </ion-buttons>
   
     <ion-grid class="hogar-menu">
@@ -140,10 +140,65 @@
 
     <ion-row>
       <ion-col size="12" size-md class="">
-        
+        <ion-item-group style="margin-left:10vw; margin-right:10vw; margin-bottom:10vw;">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-textarea [formControl]="name"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-textarea [formControl]="email"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Teléfono</ion-label>
+            <ion-textarea [formControl]="phone"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Asunto</ion-label>
+            <ion-textarea [formControl]="subject"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Mensaje</ion-label>
+            <ion-textarea rows=10 [formControl]="message"></ion-textarea>
+          </ion-item>
+          <ion-button color="dark"  (click)="sendEmail()" class="boton_acción">
+            <ion-icon slot="start" name="mail-outline"></ion-icon>
+            Enviar
+          </ion-button>
+        </ion-item-group>
+          
       </ion-col>
+      <ion-col size="12" size-md class="">
+        <ion-item-group style="margin:10vw">
+          <ion-item>
+            <ion-label position="fixed">
+              Email:
+            </ion-label>
+            <ion-label>
+              operations@grinboss.com
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label position="fixed">
+              Teléfono:
+            </ion-label>
+            <ion-label>
+              606 41 02 75
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label position="fixed">
+              Web:
+            </ion-label>
+            <ion-label>
+              https://hogar.grinboss.com
+            </ion-label>
+          </ion-item>
+        </ion-item-group>
+        
+    </ion-col>
     </ion-row>
-    
+    <app-footer></app-footer>
   </ion-grid>
-
+  
 </ion-content>

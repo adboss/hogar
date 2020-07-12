@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RobotsComponent } from './robots/robots.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'fontaneros/',
+    redirectTo: 'fontaneros#Inicio',
     pathMatch: 'full'
   },
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   
+  
 ];
 
 @NgModule({
@@ -24,4 +26,8 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+  constructor() {
+    console.log("AppRoutingModule");
+  }
+}

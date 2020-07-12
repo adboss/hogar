@@ -14,4 +14,10 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class FolderPageRoutingModule {}
+export class FolderPageRoutingModule {
+
+  constructor() {
+    console.log("FolderPageRoutingModule");
+  }
+
+}
