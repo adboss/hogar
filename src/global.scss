@@ -33,3 +33,26 @@ ion-toolbar {
     border: none;
 }
 
+.toast {
+    text-align: center;
+  }
+
+  .success-dialog {
+    color: white !important;
+    
+    .mat-simple-snackbar-action {
+        color: red;
+    }
+}
+
+.transparent-modal {
+    --background: #0000005c;
+   
+    .modal-wrapper {
+      backdrop-filter: blur(12px);
+    }
+   
+    ion-content {
+      --background: transparent;
+    }
+  }

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Adarga</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="informes">
+        <ion-icon name="newspaper-outline"></ion-icon>
+        <ion-label>Informes</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="asientos">
+        <ion-icon name="layers-outline"></ion-icon>
+        <ion-label>Asientos</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="analisis">
+        <ion-icon name="share-social-outline"></ion-icon>
+        <ion-label>Análisis</ion-label>
+      </ion-tab-button>
+  
+      
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,15 @@
+<div class="drawer" #drawer>
+  <div class="ion-text-center">
+    <ion-button fill="clear" expand="full" (click)="toggleDrawer()">
+      <div class="drawer-pull">
+
+      </div>
+    </ion-button>
+  </div>
+
+  <ion-list *ngFor="let com of companiesList">
+    <ion-item button (click)="companySelected(com)"> 
+        {{com}}
+    </ion-item>
+  </ion-list>
+</div>

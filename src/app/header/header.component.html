@@ -1,0 +1,22 @@
+<ion-header style="z-index: 200000;" >
+  <ion-toolbar class="toolbar-background">
+    <ion-buttons slot="start" style="margin-top: px; padding-top: 0px;">
+      <ion-menu-button></ion-menu-button>
+      <ion-label >{{pageTitle}}</ion-label>
+    </ion-buttons>
+  
+    <ion-grid class="hogar-menu">
+      <ion-row>
+        <ion-col size="6">
+        </ion-col>
+        <ion-col *ngFor="let a of array">
+          <ion-item [routerLink]="['/']" fragment="{{ a.title }}" routerDirection="forward" class="hogar-link">{{ a.title }}</ion-item>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+

@@ -1,0 +1,173 @@
+<ion-header>
+</ion-header>
+
+<ion-content scrollY="{{!backdropVisible}}">
+  
+  <ion-button color="tertiary" expand="full" (click)="drawer.toggleDrawer()">
+    {{company}}
+  </ion-button>
+  <div class="backdrop" [ngClass]="backdropVisible ? 'fade-in' : 'fade'" tappable (click)="drawer.toggleDrawer()"></div>
+ 
+  <ion-list>
+    <ion-list-header lines="inset" color="secondary">
+      <ion-label>Activo</ion-label>
+    </ion-list-header>
+
+    <ion-item class="financial-concept-label">
+      <ion-label >
+        Activo Circulante
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].activos.ActivoCirculante | currency:"EUR":'symbol':"1.0-0"}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Activo Fijo
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].activos.ActivoFijo | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Activo Financiero
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].activos.ActivoFinanciero | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+    <ion-item></ion-item>
+
+    <ion-list-header lines="inset" color="secondary">
+      <ion-label>Pasivo</ion-label>
+    </ion-list-header>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Acreedores a Largo Plazo
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].pasivos.AcreedoresLargoPlazo | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Acreedores Operaciones Comunes
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].pasivos.AcreedoresOperacionesComun | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Pasivo Circulante
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].pasivos.PasivoCirculante | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+    <ion-item></ion-item>
+
+    <ion-list-header lines="inset" color="secondary">
+      <ion-label>Patrimonio Neto</ion-label>
+    </ion-list-header>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Capital Social
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].patrimonioNeto.CapitalSocial | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Reservas
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].patrimonioNeto.Reservas | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Ajustes Por Cambio Valor
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].patrimonioNeto.AjustesPorCambioValor | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Resultados Pendientes de Aplicación
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].patrimonioNeto.ResultadosPendientesAplicacion | currency:"EUR":true:"1.0-0" }}
+      </ion-label>
+    </ion-item>
+    <ion-item></ion-item>
+
+
+    <ion-list-header lines="inset" color="secondary">
+      <ion-label>Cuenta de Resultados</ion-label>
+    </ion-list-header>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Ingresos Dividendos
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].cuentaResultados.ingresosDividendos | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Gastos Custodia
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].cuentaResultados.gastosCustodia | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Gastos Mantenimiento
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].cuentaResultados.gastosMantenimiento | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Gastos Comisiones
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].cuentaResultados.gastosComisiones | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="financial-concept-label">
+      <ion-label>
+        Resultado del Ejercicio
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        {{ repArray[index].cuentaResultados.resultadoDelEjercicio | currency:"EUR":'symbol':"1.0-0" }}
+      </ion-label>
+    </ion-item>
+    <ion-item></ion-item>
+
+  </ion-list>
+
+  <div class="backdrop" [ngClass]="backdropVisible ? 'fade-in' : 'fade'" tappable (click)="drawer.toggleDrawer()"></div>
+ 
+  <app-drawer (openStateChanged)="toggleBackdrop($event)" (company)="getCompany($event)" #drawer></app-drawer>
+</ion-content>

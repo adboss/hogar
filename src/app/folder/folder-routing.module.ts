@@ -17,7 +17,7 @@ const routes: Routes = [
 export class FolderPageRoutingModule {
 
   constructor() {
-    console.log("FolderPageRoutingModule");
+    
   }
 
 }
