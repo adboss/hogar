@@ -24,7 +24,8 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../asientos/asientos.module#AsientosPageModule'
+            //loadChildren: '../asientos/asientos.module#AsientosPageModule'
+            loadChildren: ()=> import('../asientos/asientos.module').then(m => m.AsientosPageModule)
           }
         ]
       },

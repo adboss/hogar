@@ -11,7 +11,7 @@ import {
   take,
 } from 'rxjs/operators';
 import { ToastController } from '@ionic/angular';
-import * as urls from '../global/urls'
+import * as urls from '../global/urls';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
