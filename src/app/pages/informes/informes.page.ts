@@ -16,7 +16,7 @@ export class InformesPage implements OnInit {
   rep: report = null;
   repArray = new Array();
   company: any = "Bankinter";
-  index:number = 0;
+  index:number = 0; 
 
   backdropVisible = false;
   
@@ -41,7 +41,7 @@ export class InformesPage implements OnInit {
       console.log(res);
       this.repArray = res;
       await loading.dismiss();
-      
+       
     });
   }
 
@@ -67,6 +67,7 @@ export class InformesPage implements OnInit {
   setRepZero(){
 
     let activosInit = {
+      Caja:0,
       ActivoCirculante: 0,
       ActivoFijo: 0,
       ActivoFinanciero: 0
@@ -77,6 +78,7 @@ export class InformesPage implements OnInit {
       gastosCustodia: 0,
       gastosMantenimiento: 0,
       ingresosDividendos: 0,
+      gananciasInversionesFinancieras: 0,
       resultadoDelEjercicio: 0,
 
     }

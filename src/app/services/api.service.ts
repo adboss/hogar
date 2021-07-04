@@ -122,17 +122,147 @@ export class ApiService {
 
 
  gastoCustodia(
-        empresa, sociedad, contrato, descripcion, gastoCustodia, fecha
+        sociedad, contrato, descripcion, gastoCustodia, fecha
  ){
 
-  let url = urls.api_accounting + "/custodia?empresa=" + empresa 
-      + "&sociedad=" + sociedad
+  
+
+  let url = urls.api_accounting + "/custodia?"  
+      + "sociedad=" + sociedad
       + "&contrato=" + contrato
       + "&descripcion=" + descripcion
       + "&custodia=" + gastoCustodia
       + "&fecha=" + fecha
   console.log(url);
   return this.http.get(url);
+}
+
+gastoMantenimiento(
+    sociedad, contrato, descripcion, gastoCustodia, fecha
+  ){
+
+  let url = urls.api_accounting + "/mantenimiento?" 
+  + "sociedad=" + sociedad
+  + "&contrato=" + contrato
+  + "&descripcion=" + descripcion
+  + "&mantenimiento=" + gastoCustodia
+  + "&fecha=" + fecha
+  console.log(url);
+  return this.http.get(url);
+}
+
+gastoDividendo(
+  empresa, sociedad, contrato, description, dividendo, retencionEnOrigen, retencionEnDestino, gastoComisionDividendo, ivaComisionDividendo, cambio,
+      fecha
+){
+
+    let url = urls.api_accounting + "/dividendos?empresa=" + empresa 
+    + "&sociedad=" + sociedad
+    + "&contrato=" + contrato
+    + "&descripcion=" + description
+    + "&dvidendos=" + dividendo
+
+    + "&retencionEnOrigen=" + retencionEnOrigen
+    + "&retencionEnDestino=" + retencionEnDestino
+    + "&gastoComisionDividendo=" + gastoComisionDividendo
+    + "&ivaComisionDividendo=" + ivaComisionDividendo
+    + "&cambio=" + cambio
+
+    + "&fecha=" + fecha
+    console.log(url);
+    return this.http.get(url);
+}
+
+adquisicion(
+  empresa, sociedad, contrato, description, inversion, precio, acciones, cambio,
+      fecha
+){
+
+    let url = urls.api_accounting + "/adquisicion?empresa=" + empresa 
+    + "&sociedad=" + sociedad
+    + "&contrato=" + contrato
+    + "&descripcion=" + description
+    + "&inversion=" + inversion
+
+    + "&precio=" + precio
+    + "&acciones=" + acciones
+    + "&cambio=" + cambio
+
+    + "&fecha=" + fecha
+    console.log(url);
+    return this.http.get(url);
+}
+
+aportacioninversores(
+  sociedad, contrato, description, aportacion, inversor, 
+      fecha
+){
+
+    let url = urls.api_accounting + "/aportacioninversores?sociedad=" + sociedad 
+    
+    + "&contrato=" + contrato
+    + "&descripcion=" + description
+    + "&aportacion=" + aportacion
+    + "&inversor=" + inversor
+    + "&fecha=" + fecha
+    console.log(url);
+    return this.http.get(url);
+}
+
+
+aportacionsocios(
+  sociedad, contrato, description, aportacion, inversor, 
+      fecha
+){
+
+    let url = urls.api_accounting + "/aportacioninversores?sociedad=" + sociedad 
+    
+    + "&contrato=" + contrato
+    + "&descripcion=" + description
+    + "&aportacion=" + aportacion
+    + "&inversor=" + inversor
+    + "&fecha=" + fecha
+    console.log(url);
+    return this.http.get(url);
+}
+
+inversionesfinancieras(
+  empresa, sociedad, contrato, description, inversion, precio, 
+      acciones, cambio,
+      fecha
+){
+
+    let url = urls.api_accounting + "/inversionesfinancieras?empresa=" + empresa 
+    + "&sociedad=" + sociedad
+    + "&contrato=" + contrato
+    + "&descripcion=" + description
+    + "&inversion=" + inversion
+    + "&precio=" + precio
+    + "&acciones=" + acciones
+    + "&cambio=" + cambio
+    + "&fecha=" + fecha
+    console.log(url);
+    return this.http.get(url);
+}
+
+
+ventatitulos(
+  empresa, sociedad, contrato, description, inversion, precio, 
+      acciones, cambio,
+      fecha
+){
+
+    let url = urls.api_accounting + "/ventatitulos?empresa=" + empresa 
+    + "&sociedad=" + sociedad
+    + "&contrato=" + contrato
+    + "&descripcion=" + description
+    + "&inversion=" + inversion
+    + "&precio=" + precio
+    + "&acciones=" + acciones
+    + "&cambio=" + cambio
+    + "&fecha=" + fecha
+    console.log(url);
+    return this.http.get(url);
 }
 
 }

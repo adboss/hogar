@@ -53,7 +53,7 @@ export class FolderPage implements OnInit {
   pageTitle = "Adarga";
   cardTitle = "Adarga";
   slogan = "Confianza, Sentido y Tecnología";
-  paragraph1_benefits = "Adarga Capital, S.L. es una sociedad patrimonial al servicio de sus socios. Esta inscrita en el Registro Mercantil de Madrid con el número XXXXXXX";
+  paragraph1_benefits = "Adarga Capital, S.L. es una sociedad patrimonial al servicio de sus socios.";
   paragraph2_benefits = "La razón de ser de Adarga es la inversión a largo plazo del patrimonio confiado por los socios. La inversión se realiza con los criterios de prudencia y con el objetivo de maximizar el ratio de rentabilidad/riesgo";
   paragraph3_benefits = "La sociedad no está supervisada por la CNMV porque su objeto social no está incluido dentro de los supuestos de dicho regulador. Por eso es importante destacar que no ofrece servicios de inversión al público general";
   paragraph4_benefits = "La estrategia de inversión llevada a cabo se basa en los siguientes pilares: ";

@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ReactiveFormsModule} from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module'; 
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { ReactiveFormsModule} from '@angular/forms';
     MatSelectModule,
     MatFormFieldModule,
     MatExpansionModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   declarations: [AsientosPage]
 })

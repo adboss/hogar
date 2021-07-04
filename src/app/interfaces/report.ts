@@ -11,6 +11,7 @@ export interface report {
 
 
 export interface activo {
+    Caja: number;
     ActivoCirculante: number;
     ActivoFinanciero: number;
     ActivoFijo: number;
@@ -33,6 +34,7 @@ export interface patrimonioNeto {
 
 export interface resultados {
     ingresosDividendos: number;
+    gananciasInversionesFinancieras: number;
     gastosCustodia: number;
     gastosMantenimiento: number;
     gastosComisiones: number;

@@ -18,6 +18,7 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar'; 
 import { SharedModule } from './shared/shared.module'; 
+import { DatePipe } from '@angular/common';
 
 
 
@@ -46,13 +47,14 @@ import { SharedModule } from './shared/shared.module';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     TransferService,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(){
-    console.log("AppModule");
+    
   }
 
 }

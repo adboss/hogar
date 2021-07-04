@@ -1,0 +1,55 @@
+<mat-accordion style="margin-bottom: 20px;">
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header [collapsedHeight]="asi.heigthSize()" [expandedHeight]="asi.heigthSize()">
+      <mat-panel-title>
+        <ion-label>{{title}}</ion-label>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    
+      <form [formGroup]="asientosForm">
+        <ion-input type="text" formControlName="empresa" placeholder="empresa ticker | Ej: MMM">
+          Empresa
+        </ion-input>
+        <ion-input formControlName="sociedad">
+          <ion-label slot="start">Sociedad</ion-label>
+          <ion-select  slot="end" (ionChange)="selectEmpresa($event)">
+            <ion-select-option *ngFor="let soc of asi.sociedades" >{{soc.name}}</ion-select-option>      
+          </ion-select>
+        </ion-input>
+        <ion-input>
+          <ion-label slot="start">Contrato</ion-label>
+          <ion-select  slot="end"  disabled="{{selectDisabled}}" formControlName="contrato" placeholder="{{place}}">
+            <ion-select-option  *ngFor="let con of sociedadElected.contratos">{{con}}</ion-select-option>      
+          </ion-select>
+        </ion-input>
+
+        <ion-input type="text" formControlName="descripcion" placeholder="descripcion">
+          Descripción
+        </ion-input>
+        <ion-input type="text" formControlName="inversion" placeholder="Ej: 23.4">
+          Inversión
+        </ion-input>
+        <ion-input type="text" formControlName="precio" placeholder="Ej: 23.4">
+          Precio
+        </ion-input> 
+        <ion-input type="text" formControlName="acciones" placeholder="Ej: 23.4">
+          Acciones
+        </ion-input>  
+        <ion-input type="text" formControlName="cambio" placeholder="Ej: 23.4">
+          Cambio
+        </ion-input>     
+        
+        <ion-input type="text" formControlName="fecha" (ionChange)="asi.selectDate($event)">
+          <ion-label>Fecha</ion-label>
+          <ion-datetime placeholder="Select Date" displayFormat="DD-MMM-YYYY"
+           ></ion-datetime>
+        </ion-input>
+        <ion-button expand="full" fill="outline" (click)="send()">Enviar</ion-button>
+        
+      </form>
+    
+    
+    
+  </mat-expansion-panel>
+</mat-accordion>
