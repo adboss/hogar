@@ -265,4 +265,13 @@ ventatitulos(
     return this.http.get(url);
 }
 
+actualizacionvalores(
+  
+){
+
+    let url = urls.api_accounting + "/actualizacionvallores";
+    console.log(url);
+    return this.http.get(url);
+}
+
 }
